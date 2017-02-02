@@ -1,0 +1,43 @@
+>>> ORIGINS
+This outstanding dragons were initially created by cephalo (Rich Marinaccio) for his campaign "The Library of Kratemaqht"
+https://forums.wesnoth.org/viewtopic.php?f=8&t=37798
+
+>>> CONTENT
+This add-on contains:
+ - images for the three dragons (ancient-dragon, gold-dragon and young-dragon)
+ - macros for the dragons animation
+ - "Ancient Dragon" unit which has the same stats as the mainline "Fire Dragon" and the animation of the ancient-dragon
+
+>>> ADDING TO YOUR PROJECT
+
+>> add in your _server.pbl
+
+dependencies=Rich_Marinaccios_Dragons
+
+>> add in your _main.cfg
+
+[binary_path]
+    path=data/add-ons/Rich_Marinaccios_Dragons
+[/binary_path]
+{~add-ons/Rich_Marinaccios_Dragons/macros}
+
+It's important that {~add-ons/Rich_Marinaccios_Dragons/macros} export precedes the [+units] section,
+since the macros should be processed before the dragon unit declaration
+
+>> additionally, if you want the Ancient Dragon - add in your _main.cfg
+[+units]
+    {~add-ons/Rich_Marinaccios_Dragons/units}
+[/units]
+
+>>> ANIMATION MACROS DESCRIPTION
+animation_utils.cfg file contains macros for the dragons animation. It has a DRAGON_ANIMATION macro which includes all
+the other macro from the file, and additionally sets the corresponding defend animation and the dragon image.
+
+The usage is {DRAGON_ANIMATION DRAGON_NAME}, where DRAGON_NAME is one of ancient-dragon, gold-dragon or young-dragon
+The DRAGON_ANIMATION should be placed within the unit_type declaration. It will create all the required unit animations.
+Particularly, there are animations for "bite", "tail" and "fire breath" attacks. Also there are several standing
+animation variations and extra animations. Standing animation variation may be turned on by setting the corresponding
+unit variable (standing variations will not smoothly work on attacks, so use it only to make the scenario nicer if required)
+The extra animation can be used with animate_unit directive.
+
+See animation_utils.cfg for details and Ancient_Dragon.cfg as an example.

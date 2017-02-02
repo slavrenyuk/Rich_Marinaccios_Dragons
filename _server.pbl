@@ -1,0 +1,9 @@
+author="sergey, CannonFodder"
+description="This outstanding dragons were initially created by cephalo (Rich Marinaccio) for his campaign The Library of Kratemaqht https://forums.wesnoth.org/viewtopic.php?f=8&t=37798
+More information available in ABOUT.txt file in the add-on folder."
+email="svlavrenyuk@gmail.com"
+icon="units/monsters/fire-dragon.png"
+passphrase=<PASSPHRASE>
+title="Rich Marinaccio's Dragons"
+type="media"
+version="1.2.0"
