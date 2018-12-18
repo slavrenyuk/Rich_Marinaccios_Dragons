@@ -3,7 +3,7 @@ description="This outstanding dragons were initially created by cephalo (Rich Ma
 More information available in ABOUT.txt file in the add-on folder."
 email="svlavrenyuk@gmail.com"
 icon="units/monsters/fire-dragon.png"
-passphrase=<PASSPHRASE>
+passphrase=
 title="Rich Marinaccio's Dragons"
 type="media"
-version="1.2.0"
+version="1.2.1"
